@@ -1,0 +1,1 @@
+https://dev.to/beksultandev/how-to-add-https-support-to-your-spring-boot-app-2h53
