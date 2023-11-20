@@ -1,0 +1,5 @@
+server:
+  ssl:
+    enabled: true
+    certificate: ${FULLCHAINPEM}
+    certificate-private-key: ${PRIVKEYPEM}

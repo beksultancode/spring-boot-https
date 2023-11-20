@@ -1,0 +1,17 @@
+services:
+  spring-boot-https:
+    container_name: spring-boot-https
+    image: beksultancs/spring-boot-https:1
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - certs:/certs
+    environment:
+      - SERVER_PORT=443
+      - FULLCHAINPEM=/certs/live/hi.beksultan.dev/fullchain.pem
+      - PRIVKEYPEM=/certs/live/hi.beksultan.dev/privkey.pem
+volumes:
+  certs:
+    external: true
